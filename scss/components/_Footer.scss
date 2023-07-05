@@ -1,0 +1,56 @@
+.footer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 9%;
+  justify-content: space-between;
+  background: $second-bg-color;
+
+  .footer-text,
+  .footer-iconTop {
+    position: relative;
+  }
+
+  .footer-text p {
+    font-size: $font-size-normal;
+  }
+
+  .footer-iconTop a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    background: $main-color;
+    border: 0.2rem solid $main-color;
+    border-radius: 0.6rem;
+    overflow: hidden;
+    z-index: 1;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      content: "";
+      background: $bg-color;
+      z-index: -1;
+      transition: $transition-all;
+    }
+
+    &:hover::before {
+      width: 100%;
+    }
+
+    i {
+      font-size: $font-size-navbar;
+      color: $text-color;
+      transition: $transition-all;
+    }
+
+    &:hover i {
+      color: $main-color;
+    }
+  }
+}
