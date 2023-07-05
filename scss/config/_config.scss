@@ -1,0 +1,124 @@
+/* === RESET === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+/* === Reused Styles === */
+html {
+  overflow-x: hidden;
+}
+body {
+  background: $bg-color;
+  color: $text-color;
+}
+.main {
+  overflow: hidden;
+}
+section {
+  min-height: 100vh;
+  padding: 3rem 9% 2rem;
+}
+span {
+  color: $main-color;
+}
+
+/* === Reused BUTTONS === */
+.btn-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 25rem;
+  height: 5rem;
+}
+.btn-box .btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  height: 70%;
+  background: $main-color;
+  border: 0.2rem solid $main-color;
+  border-radius: 0.8rem;
+  font-size: $font-size-normal;
+  font-weight: $font-weight-600;
+  letter-spacing: 0.1rem;
+  color: $bg-color;
+  z-index: 1;
+  overflow: hidden;
+  transition: $transition-all;
+}
+.btn-box .btn:nth-child(2) {
+  background: transparent;
+  color: $main-color;
+}
+.btn-box .btn:nth-child(2):hover {
+  color: $text-color;
+}
+.btn-box .btn:nth-child(2)::before {
+  background: $main-color;
+}
+.btn-box .btn:hover {
+  color: $main-color;
+}
+.btn-box .btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: $bg-color;
+  z-index: -1;
+  transition: $transition-all;
+}
+.btn-box .btn:hover::before {
+  width: 100%;
+}
+
+@keyframes homeBgText {
+  0%,
+  10%,
+  100% {
+    background-position: -20rem 0;
+  }
+  65%,
+  85% {
+    background-position: 0 0;
+  }
+}
+@keyframes homeCursorText {
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+  65%,
+  78%,
+  85% {
+    width: 100%;
+    opacity: 1;
+  }
+  75%,
+  81% {
+    opacity: 0;
+  }
+}
+@keyframes aboutSpinner {
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@keyframes showRight {
+  100% {
+    width: 0;
+  }
+}
+/* === x === x === x === */
