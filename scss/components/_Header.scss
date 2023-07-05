@@ -10,7 +10,7 @@
   justify-content: space-between;
   align-items: center;
   z-index: 100;
-  transition: var(--transition-all);
+  transition: $transition-all;
 
   &.sticky {
     background: var(--bg-color);
@@ -18,24 +18,24 @@
 
   .logo {
     position: relative;
-    font-size: var(--font-size-logo);
-    color: var(--text-color);
-    font-weight: var(--font-weight-600);
+    font-size: $font-size-logo;
+    color: $text-color;
+    font-weight: $font-weight-600;
   }
 
   .navbar {
     position: relative;
 
     a {
-      font-size: var(--font-size-navbar);
-      color: var(--text-color);
-      font-weight: var(--font-weight-500);
+      font-size: $font-size-navbar;
+      color: $text-color;
+      font-weight: $font-weight-500;
       margin-left: 3rem;
       transition: 0.3s;
 
       &:hover,
       &.active {
-        color: var(--main-color);
+        color: $main-color;
       }
     }
   }
@@ -43,30 +43,9 @@
   #menu-icon {
     position: relative;
     font-size: 2rem;
-    color: var(--text-color);
+    color: $text-color;
     cursor: pointer;
     display: none;
-  }
-
-  @media (max-width: 1000px) {
-    :root {
-      /* --- Site Font-Size --- */
-      --font-size-h1: 3rem;
-      --font-size-h2: 2rem;
-      --font-size-h3: 1.5rem;
-      --font-size-logo: 1rem;
-      --font-size-navbar: 1.2rem;
-      --font-size-normal: 0.8rem;
-    }
-  }
-
-  @media (max-width: 462px) {
-    :root {
-      /* --- Site Font-Size --- */
-      --font-size-h1: 2.5rem;
-      --font-size-h2: 1.5rem;
-      --font-size-h3: 1.3rem;
-    }
   }
 }
 /* === x === x === x === */
